@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.17.2
+    hooks:
+    - id: markdownlint-cli2
+      args: ['--config', '.markdownlint.yaml']
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.2.2
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages: [push]
